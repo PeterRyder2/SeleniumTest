@@ -6,14 +6,16 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver import Chrome
 import pandas as pd
 import time
+
+
 #%%
-path=r'C:\Users\peter\Documents\SeleniumTest\TestDownload'
+path=r'C:\Users\peter\Documents\SeleniumTest'
 
 #Use Incognito mode when scraping
 
 chrome_options = Options()
 chrome_options.add_argument(" — incognito")
-browser = webdriver.Chrome(path, options=chrome_options)
+browser = webdriver.Chrome(options=chrome_options)
 # pages=int(input('How Many Pages Do You Want to Scrape? '))
 
 #%%
@@ -21,6 +23,7 @@ browser = webdriver.Chrome(path, options=chrome_options)
 pages=3
 url='http://books.toscrape.com/catalogue/page-1.html'
 
+#%%
 #Create Function to scrape webpage
 
 def getdata(start_url,pgs):
